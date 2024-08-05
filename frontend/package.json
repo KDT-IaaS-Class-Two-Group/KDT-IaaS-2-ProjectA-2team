@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.5",
+    "@nestjs/mongoose": "^10.0.10",
+    "mongoose": "^8.5.2",
+    "next": "^14.2.5",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/babel__generator": "^7.6.8",
     "@types/jest": "^29.5.12",
+    "@types/next": "^9.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
