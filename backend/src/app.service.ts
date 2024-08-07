@@ -8,5 +8,4 @@ export class AppService {
 }
 
 @Injectable()
-export class TestService{
-}
+export class TestService {}
