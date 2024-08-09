@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export default function Home(){
-  const [keyword, setInputValue] = useState('');
+  const [signup, setInputValue] = useState('');
   const [resValue, setResValue] = useState('');
 
   const Submit = async () => {
@@ -15,7 +15,7 @@ export default function Home(){
       /**
        * * { inputValue : string }
        */
-      body: JSON.stringify({ keyword }),
+      body: JSON.stringify({ signup }),
     });
 
     //*const data = await response.json() as { inputValue : string };
@@ -27,7 +27,7 @@ export default function Home(){
     if (response.ok) {
       // 요청이 성공한 경우 입력 필드 초기화
       setInputValue('');
-      setResValue(data.keyword);
+      setResValue(data.signup);
       alert('Data successfully sent to the server!');
     } else {
       alert('Failed to send data to the server.');
@@ -35,7 +35,7 @@ export default function Home(){
   }
   return(
     <>
-    <input className= " bg-slate-500" title="안녕" value ={keyword} onChange={(e) => setInputValue(e.target.value)}>
+    <input className= " bg-slate-500" title="안녕" value ={signup} onChange={(e) => setInputValue(e.target.value)}>
     </input>
     <button className=" w-auto h-auto bg-amber-800" type = "submit" onClick={Submit}>submit</button>
     <div>{resValue}</div>
