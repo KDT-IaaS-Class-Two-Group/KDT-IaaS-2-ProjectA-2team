@@ -17,9 +17,9 @@ export class AppController {
   //   return { message: 'Data received successfully', receivedData: body};
   // }
   @Post()
-  postCalc(@Body() body: any) {
+  async handleSignUp(@Body() body: any) {
     console.log('Received data:', body);
 
-    return body;
+    return { message: 'Sign up data received successfully', receivedData: body };
   }
 }
